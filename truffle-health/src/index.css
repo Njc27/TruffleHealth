@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); /*title: NEU DEALS */
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quattrocento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet');
+
+
+:root{
+
+ --Righteous:'Righteous',serif;
+ --Quattrocent:'Quattrocent', sans-serif;
+ --Pacifico: 'Pacifico',sans-serif;
+ --font: 'Plus Jakarta Sans', sans-serif;
+ 
+ --color-bg: #ffffff;
+ --color-purple: #7e77e5;
+ --color-green: #9cfccf;
+ --color-red: #ff3844;
+ --color-blue: #70c8f0;
+ --color-yellow:#f4d16c;
+ --color-black:#000000;
+ --light-purple: #F6F6FE;
+ --light-green: #9CFFD1;
+ --light-blue: #72CCF5;
+ --light-yellow: #FFDA71;
+ --medium-purple: #E8E7F8;
+ --medium-gray: #4A4A4A;
+ --soft-gray: #999999;
+ --card-shadow: 0 3px 10px rgba(0, 8, 24, 0.12);
+ 
+ --container-width-lg: 75%;
+ --container-width-md: 86%;
+ --container-width-sm: 90%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+ box-sizing: border-box;
+}
+
+body {
+ margin: 0;
+}
+
+.container {
+
+ margin: 1rem;
+ text-align: center;
 }

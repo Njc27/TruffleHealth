@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.logo{
+    padding-right: 2rem;
+}
+
+h1{
+    font-family: var(--font);
+    font-size: 2rem;
+}
