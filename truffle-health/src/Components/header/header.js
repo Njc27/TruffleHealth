@@ -1,14 +1,38 @@
 import React from 'react'
 import header_img from '../../Assests/truffle_logo.png'
 import './header.css'
+import { useSelector } from 'react-redux';
 
-const header = () => {
+import { useNavigate } from 'react-router-dom';
+
+
+const Header = () => {
+  let navigate = useNavigate();
+  const{loggedInUser} = useSelector(state=>state.user);
+
   return (
     <div className='header'>
-    <img className='logo' src={header_img} alt="Truffle_logo"/>
-    <h1>Truffle Health</h1>
+      <div className='company_name'>
+      <img className='logo' src={header_img} alt="Truffle_logo"/>
+      <div className='name'>Truffle Health</div>
+      </div>
+      <div>
+      {loggedInUser?.firstName?(
+        <div className='userData'>
+          Hi {loggedInUser?.firstName}
+        </div>
+      ):(
+      <div className='btn-layout'>
+      <input type='button' value="Sign In" className='primary-btn' onClick={()=>{navigate('/login')}}></input>
+      <input type = 'button' value ="Register" className = 'secondary-btn'onClick={()=>{navigate('/register')}} ></input>
+      </div>
+      )
+    }
+    </div>
+      
+    
     </div>
   )
 }
 
-export default header
+export default Header

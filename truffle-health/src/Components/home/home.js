@@ -1,30 +1,50 @@
 import React from 'react'
 import './home.css'
+import { useSelector,useDispatch } from 'react-redux';
+import billPreview from "../../Assests/billHospital.png";
+import addImage from "../../Assests/plus.jpg";
+import { useNavigate } from 'react-router-dom';
 
-const home = () => {
+
+const Home = () => {
+  const{billData} = useSelector(state=>state.bills);
+  const navigate = useNavigate();
+
+
+
   return (
-    <div>
-    <h1>Summary of the bills</h1>
+    <div className='home'>
+      <div className='home-title'>
+        DashBoard
+      </div>
+      <div className='dashboard-container'>
+        {billData.map(items =>(
+          <div className='cards'>
+          <div className='card-image'>
+            <img src = {billPreview} />
+          </div>
+          <div className='card-tite'>
 
-<table>
-  <tr>
-    <th>Bill No.</th>
-    <th>Link to the Bill</th>
-    <th>Submitted Date</th>
-  </tr>
-  <tr>
-    <td>January</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>February</td>
-    <td>$80</td>
-  </tr>
-</table>
-<button>View</button>
-<button>Edit</button>
+          </div>
+          <div className='card-details'>
+
+          </div>
+        </div>
+        ))}
+        <div className='cards'onClick={()=>navigate('/addBill')}>
+          <div className='card-image'>
+            <img src = {addImage} />
+          </div>
+          <div className='card-tite'>
+            Add a bill to the db
+          </div>
+          <div className='card-details'>
+
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-export default home
+export default Home

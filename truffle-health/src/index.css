@@ -38,10 +38,40 @@
 
 body {
  margin: 0;
+ background-color: var(--light-purple);
+ font-family: var(--font);
 }
 
 .container {
 
  margin: 1rem;
  text-align: center;
+}
+
+.primary-btn{
+    background-color: var(--color-purple);
+    width: 15%;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    font-family: var(--font);
+}
+
+.secondary-btn{
+    background-color: var(--color-green);
+    width: 15%;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    font-family: var(--font);
 }

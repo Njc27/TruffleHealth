@@ -7,7 +7,7 @@ const initialState = {
    console.log(type,payload)
     switch (type) {
         case(ActionTypes.SUBMIT_BILLS):
-      return {...state,...payload}
+      return {...state,billData:[...state.billData,...payload]}
        default:
           return state;
     }

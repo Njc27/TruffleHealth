@@ -2,13 +2,45 @@
     display: flex;
     margin-left: 2rem;
     margin-top: 0.5rem;
+    justify-content: space-between;
 }
 
 .logo{
-    padding-right: 2rem;
+    width: 25px;
+    height: 25px;
+    margin-right: 12px;
+   
+}
+.header .company_name{
+    display: flex;
 }
 
-h1{
+.header .company_name .name{
     font-family: var(--font);
-    font-size: 2rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    color: #c8c8c8;
+}
+.header .userData{
+    display: flex;
+    color: black;
+    padding-right: 50px;
+}
+.header .btn-layout input{
+    width: 100px !important;
+    padding-right: 2px;
+    font-size: 14px;
+
+}
+.header .btn-layout input:nth-child(1){
+    margin-right: 50px
+}
+
+.header .btn-layout{
+    float: right;
+    display: flex;
+    padding: 12px;
+    width: 100%;
+    margin-left: 50%;
+    
 }

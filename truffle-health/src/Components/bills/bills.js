@@ -2,13 +2,13 @@ import React,{useState} from 'react'
 import { useSelector,useDispatch } from 'react-redux';
 import './bills.css';
 import {submitBill} from '../../Redux/actions/billAction'
-import { on } from 'events';
+import {useNavigate} from "react-router-dom";
 
 const Bills = () => {
 
-    const{billData:bData} = useSelector(state=>state.bills);
-    console.log(bData);
-    const dispatch = useDispatch();
+  const{billData:bData} = useSelector(state=>state.bills);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [fname,setFname] = useState('');
   const [lname,setLname] = useState('');
   const [email,setEmail] = useState('');
@@ -20,8 +20,6 @@ const Bills = () => {
   const [Hname,setHname] = useState('');
   const [Dos,setDos] = useState('');
   const [billAmount,setbillAmount] = useState('');
-//   const [city,setCity] = useState('');
-//   const [city,setCity] = useState('');
 
 
 const onSubmit = e => {
@@ -44,6 +42,7 @@ const onSubmit = e => {
     }
     else{
       dispatch(submitBill(temp_bill));
+      navigate('/');
     }
   }
 
@@ -51,15 +50,15 @@ const onSubmit = e => {
 
   return (
     <>
-    <h2>Medical Bill Information</h2>
+
+    <div className='page-header'>Medical Bill Information</div>
     <div className="center">
+    <div className='form-header'>Enter Patient Details</div>
     <form className='bill_form' method="post">
     <div className='left_container'>
-    
-      <h4>Enter Patient details</h4>
         <div className="txt_field">
-        <span></span>
           <input type="text" required onChange={(e)=>{setFname(e.target.value)}}/>
+          <span></span>
           <label>First Name</label>
         </div>
         <div className="txt_field">
@@ -71,60 +70,58 @@ const onSubmit = e => {
           <input type="email" required onChange={(e)=>{setEmail(e.target.value)}}/>
           <span></span>
           <label>Email id</label>
-        </div><div className="txt_field">
-          <input type="tel" id="phone" name="phoneNumber" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required onChange={(e)=>{setPhoneNumber(e.target.value)}}></input>
+        </div>
+        <div className="txt_field">
+          <input type="tel" id="phone" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required onChange={(e)=>{setPhoneNumber(e.target.value)}}></input>
           <span></span>
           <label>Phone Number</label>
         </div>
-
-        
         <div className="txt_field">
           <input type="text" required onChange={(e)=>{setStname(e.target.value)}}/>
           <span></span>
-          <label>Street Name/Apt No.</label>
+          <label>Street/Apt Number</label>
         </div>
         <div className="txt_field">
-          <input type="text" required onChange={(e)=>{setCity(e.target.value)}}/>
+          <input type="email" required onChange={(e)=>{setCity(e.target.value)}}/>
           <span></span>
           <label>City</label>
         </div>
-        <div className="txt_field">
-          <input type="text" required onChange={(e)=>{setState(e.target.value)}}/>
+    </div>
+      <div className='right_container'>
+      <div className="txt_field">
+          <input type="email" required onChange={(e)=>{setState(e.target.value)}}/>
           <span></span>
           <label>State</label>
         </div>
         <div className="txt_field">
           <input type="text" required onChange={(e)=>{setZip(e.target.value)}}/>
           <span></span>
-          <label>Zip Code</label>
+          <label>Zip</label>
         </div>
-    </div>
-      <div className='right_container'>
-
-      
       <div className="txt_field">
-          <input type="text" required onChange={(e)=>{setHname(e.target.value)}}/>
+          <input type="text" required  onChange={(e)=>{setHname(e.target.value)}}/>
           <span></span>
           <label>Name of Hospital</label>
         </div>
         <div className="txt_field">
-          <input type="date" required onChange={(e)=>{setDos(e.target.value)}}/>
+          <input type="date"  onChange={(e)=>{setDos(e.target.value)}}/>
           <span></span>
           <label>Date of Service</label>
         </div>
         <div className="txt_field">
-          <input type="number" required onChange={(e)=>{setbillAmount(e.target.value)}}/>
+          <input type="text" required  onChange={(e)=>{setbillAmount(e.target.value)}}/>
           <span></span>
           <label>Bill Amount</label>
         </div>
-        <div className="txt_field">
-          <input type="image"/>
-          <span></span>
-          <label>Photo of bill</label>
-        </div>
-        <input className="button" type="submit" onClick={(e)=>onSubmit(e)}/>
+        <div>
+          <input type="file" id='image' />
+          <label for="image" >Photo of bill</label>
+          </div>
       </div>
       </form>
+      <div className='submit-btn'>
+      <input type = "button" value="Submit" className="primary-btn" onClick={(e)=>{onSubmit(e)}}/>
+      </div>
     </div>
     </>
  
