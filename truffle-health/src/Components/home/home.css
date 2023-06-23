@@ -36,7 +36,7 @@ table, th, td {
     font-family: var(--font);
     font-weight: 600;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 18px;
     /* padding-left: 50px; */
     border-radius: 8px;
     /* padding: 12px; */
@@ -79,6 +79,7 @@ table, th, td {
     padding-top: 5px;
     /* display: flex; */
     justify-content: space-between;
+    font-family: var(--font);
   }
 
   .dashboard-container .btn_cards .card-btn{

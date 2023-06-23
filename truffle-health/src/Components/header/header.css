@@ -15,6 +15,7 @@
 }
 .header .company_name{
     display: flex;
+    cursor: pointer;
 }
 
 .header .company_name .name{

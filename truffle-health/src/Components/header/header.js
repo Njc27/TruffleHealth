@@ -12,9 +12,9 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <div className='company_name'>
+      <div className='company_name' onClick={()=>{navigate('/')}}>
       <img className='logo' src={header_img} alt="Truffle_logo"/>
-      <div className='name'>Truffle Health</div>
+      <div className='name' >Truffle Health</div>
       </div>
       <div>
       {loggedInUser?.firstName?(

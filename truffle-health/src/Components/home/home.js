@@ -52,9 +52,9 @@ const Home = () => {
           <div className='card-details'>
 
           </div> */}
-          <button className='card-btn'>
-            <img src={btnImage}></img>
-          </button>
+          {/* <button className='card-btn'>
+      
+          </button> */}
         </div>
       </div>
     </div>
