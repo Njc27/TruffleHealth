@@ -9,6 +9,11 @@
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
   }
+  .login .errorStack{
+    position: absolute;
+    top: -50px;
+    right: -320px;
+  }
   .center h1{
     text-align: center;
     padding: 5px 0;
@@ -60,6 +65,49 @@
   .dropdown .dropdown-content .dropdown-item:hover{
     background: #dcdcdc
   
+  }
+  form .txt_field_error{
+    position: relative;
+    border-bottom: 2px solid #e2e2e2;
+    margin: 30px 0;
+  }
+  .txt_field_error input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  .txt_field_error label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: red;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .txt_field_error span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: red;
+    transition: .5s;
+  }
+  .txt_field_error input:focus ~ label,
+  .txt_field_error input:valid ~ label{
+    top: -5px;
+    color: red;
+  }
+  .txt_field_error input:focus ~ span::before,
+  .txt_field_error input:valid ~ span::before{
+    width: 100%;
   }
   form .txt_field{
     position: relative;

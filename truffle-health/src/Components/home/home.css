@@ -3,11 +3,15 @@ table, th, td {
   }
 
   .home-title{
+    margin-top: 24px;
+    font-family: var(--font);
     font-size: 25px;
     font-weight: 800;
     padding-left: 30px;
-    color: var(--color-purple);
+    text-align: center;
+    color: var(--color-black);
   }
+
   .dashboard-container{
     padding-top: 30px;
     padding-left: 30px;
@@ -20,16 +24,36 @@ table, th, td {
     border-radius: 8px;
     padding: 12px;
     width: 280px;
-    height: 230px;
-    background-color: rgb(255, 255, 255);
+    height: 310px;
+    background-color: var(--light-yellow);
     box-shadow: var( --card-shadow);
     transition: 0.5s ease-in-out;
   }
+
+  .dashboard-container .btn_cards{
+    text-align: center;
+    font-size: 15px;
+    font-family: var(--font);
+    font-weight: 600;
+    justify-content: center;
+    padding-top: 10px;
+    /* padding-left: 50px; */
+    border-radius: 8px;
+    /* padding: 12px; */
+    width: 250px;
+    height: 50px;
+    background-color: var(--light-yellow);
+    box-shadow: var( --card-shadow);
+    transition: 0.5s ease-in-out;
+    align-content: center;
+  }
+
   .cards:hover{
     transform: scale(1.05);
     cursor: pointer;
   }
   .dashboard-container .cards .card-image{
+    background-color: white;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -38,8 +62,40 @@ table, th, td {
   }
 
   .dashboard-container .cards .card-image img{
-    height: 6em;
-    width: 20em;
+    height: 10em;
+    width: 10em;
     object-fit: cover;
+  }
+  .dashboard-container .cards .card-tite{
+    font-family:var(--font);
+    padding-top: 10px;
+    margin-top: 15px;
+    margin-left: 18px;
+    font-size: 18px;
+  }
 
+  .dashboard-container .cards .card-details{
+    margin-left: 18px;
+    padding-top: 5px;
+    /* display: flex; */
+    justify-content: space-between;
+  }
+
+  .dashboard-container .btn_cards .card-btn{
+    /* width: 55px;
+    height: 50px; */
+    margin-right: 50px;
+    margin-left: 40px;
+    border: none;
+    /* padding-right: 30px; */
+    border-radius: 10px;
+    /* color: white; */
+    cursor: pointer;
+    outline: none;
+  }
+
+  .dashboard-container .btn_cards .card-btn img{
+    width:50px;
+    height: 50px;
+    padding-right: 5px;
   }

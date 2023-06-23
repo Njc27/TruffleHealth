@@ -8,6 +8,8 @@ const initialState = {
     switch (type) {
         case(ActionTypes.SUBMIT_BILLS):
       return {...state,billData:[...state.billData,...payload]}
+      case(ActionTypes.UPDATE_BILL):
+         return {...state,billData:payload}
        default:
           return state;
     }

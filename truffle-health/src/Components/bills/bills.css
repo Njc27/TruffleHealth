@@ -7,6 +7,27 @@
     border-radius: 2em;
     padding: 12px;
   }
+  .errorStack{
+    position: absolute;
+    z-index: 3;
+    width: auto;
+    top: 20px;
+    right: 20px;
+    animation: 2s down ease-in;
+  }
+  .errorStack .errors{
+    margin-top: 12px;
+    border-radius: 12px;
+  }
+  @keyframes down {
+    0%{
+      top:0px
+    }
+    100%{
+      top: 10px;
+    }
+    
+  }
   .form-header{
     display: flex;
     justify-content:center;
@@ -68,12 +89,64 @@
     background: #dcdcdc
   
   }
-
   .bill_form .txt_field{
     position: relative;
     border-bottom: 2px solid #e2e2e2;
     margin: 30px 0;
     width: 300px;
+  }
+
+  .bill_form .txt_field_error{
+    position: relative;
+    border-bottom: 2px solid #e2e2e2;
+    margin: 30px 0;
+    width: 300px;
+  }
+  .txt_field_error input{
+    width: 100%;
+    padding: 0 5px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  .txt_field_error label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: red;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .txt_field_error label::placeholder{
+    opacity: 1;
+    transition: .5s;
+    color: red;
+  }
+  .txt_field_error span::before{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: red;
+    transition: .5s;
+  }
+  .txt_field_error span::before::placeholder{
+    opacity: 0;
+  }
+  .txt_field_error input:focus ~ label,
+  .txt_field_error input:valid ~ label{
+    top: -5px;
+    color: red;
+  }
+  .txt_field_error input:focus ~ span::before,
+  .txt_field_error input:valid ~ span::before{
+    width: 100%;
   }
   .txt_field input{
     width: 100%;

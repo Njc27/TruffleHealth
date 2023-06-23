@@ -42,7 +42,7 @@ const register = () => {
             placeholder="Enter primary email"
             {...register("email", {
               required: true,
-              pattern: /[a-z.]*[@]\bnortheastern.edu/,
+              pattern: /[a-z.]*[@]\btruffleHealth.com/,
             })}
             onChange={(e) =>{setEmail(e.target.value)}}
 

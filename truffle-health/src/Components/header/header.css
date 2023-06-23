@@ -1,14 +1,16 @@
 .header{
     display: flex;
-    margin-left: 2rem;
+    margin-left: 10rem;
     margin-top: 0.5rem;
     justify-content: space-between;
 }
 
 .logo{
-    width: 25px;
-    height: 25px;
-    margin-right: 12px;
+    overflow-clip-margin: content-box;
+    margin-top: 17px;
+    width: auto;
+    height: 30px;
+    margin-right: 5px;
    
 }
 .header .company_name{
@@ -17,9 +19,11 @@
 
 .header .company_name .name{
     font-family: var(--font);
-    font-size: 1rem;
-    vertical-align: middle;
-    color: #c8c8c8;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 24px;
+    /* vertical-align: middle; */
+    color: #4A4A4A;
 }
 .header .userData{
     display: flex;
@@ -33,14 +37,14 @@
 
 }
 .header .btn-layout input:nth-child(1){
-    margin-right: 50px
+    margin-right: 20px
 }
 
 .header .btn-layout{
     float: right;
     display: flex;
-    padding: 12px;
+    padding: 17px;
     width: 100%;
-    margin-left: 50%;
+    margin-left: 100%;
     
 }
