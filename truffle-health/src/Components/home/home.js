@@ -29,12 +29,11 @@ const Home = () => {
           </div>
           <div className='card-tite'>
           Patient Name: {items?.fname}
-          </div><br/>
+          </div>
           <div className='card-details'>
             <div>
               Date of Service: {items?.Dos}
             </div>
-            <br/>
             <div>
               Bill Amount: ${items?.billAmount}
             </div>

@@ -75,6 +75,7 @@ table, th, td {
   }
 
   .dashboard-container .cards .card-details{
+    line-height: 2;
     margin-left: 18px;
     padding-top: 5px;
     /* display: flex; */
